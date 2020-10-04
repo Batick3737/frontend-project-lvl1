@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "brain-games.js",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even",
+    "brain-calc": "bin/brain-calc",
+    "brain-gcd": "bin/brain-gcd",
+    "brain-progression": "bin/brain-progression",
+    "brain-prime": "bin/brain-prime"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
