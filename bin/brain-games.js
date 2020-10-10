@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import { game }  from './src/cli.js';
-
-game();
+import { greeting }  from 'file:/root/frontend-project-lvl1/src/cli.js';
+greeting();
