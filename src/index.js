@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
-
+export const engineGame = () => {
 console.log("Welcome to the Brain Games!");
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const game = (questionGame, correctAnswer) => {
+  const games = () => {
   console.log(`Question: ${questionGame}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer === correctAnswer) {
@@ -19,4 +19,5 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
     console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".
     Let's try again, ${name}!`);
   }
-};
+ }
+}
