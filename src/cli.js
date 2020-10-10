@@ -1,10 +1,5 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-
-export const game = () => {
-console.log("Welcome to the Brain Games!");
+export const greeting = () => {
 const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-return;
+  console.log(`Hello, ${name}!`);
 };
