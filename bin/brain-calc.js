@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import {gameCalc} from 'file:/root/frontend-project-lvl1/games/calc.js';
-gameCalc();
+import {startGame} from 'file:/root/frontend-project-lvl1/src/games/calc.js';
+startGame();
