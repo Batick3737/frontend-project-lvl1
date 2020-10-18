@@ -1,5 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/Batick3737/frontend-project-lvl1/maintainability)
-![example workflow file path](https://github.com/Batick3737-patch-1/frontend-project-lvl1/workflows/.github/workflows/nodejs.yml/badge.svg)
+![example workflow name](https://github.com/Batick3737/frontend-project-lvl1/actions/runs/306927934)
 1) brain-even  https://asciinema.org/a/o6muV8XIwBGSyKVTsDv0tbNl2
 2) brain-calc  https://asciinema.org/a/dQxSILfZnHJPcO5WIUuDvIAq1
 3) brain-gcd   https://asciinema.org/a/8sBaIi3n059knNEPKuSLaWng6
