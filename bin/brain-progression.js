@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import {gameProgression} from 'file:/root/frontend-project-lvl1/games/progression.js';
-gameProgression();
+import {startGame} from 'file:/root/frontend-project-lvl1/src/games/progression.js';
+startGame();
