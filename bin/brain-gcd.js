@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import {startGame} from 'file:/root/frontend-project-lvl1/src/games/gcd.js';
+import { startGame } from '../src/games/gcd.js';
 startGame();

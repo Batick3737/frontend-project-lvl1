@@ -1,37 +1,33 @@
-import { getRandomInt } from 'file:/root/frontend-project-lvl1/src/random.js';
-import { gameEngine } from 'file:/root/frontend-project-lvl1/src/index.js';
-const getRandomInt2 = (min, max) => {
-  return getRandomInt(max-min) + min;
-}  
+import { getRandomInt } from '../random.js';
+import { gameEngine } from '../index.js';
 
-const lengthProgression = getRandomInt2(6, 11);
-const indexProgresii = getRandomInt(lengthProgression);
 
-const formulateQuestion = (question) => {
-  question[indexProgresii] = '..';
-  return `${question}`;
-}
+const lengthProgression = getRandomInt(6, 11);
+
+
 const generateQuestion = () => { 
-  const startProgression = getRandomInt(20);
-  const stepProgression = getRandomInt2(2, 6);
+  const startProgression = getRandomInt(0, 20);
+  const stepProgression = getRandomInt(2, 6);
+  const indexProgresii = getRandomInt(0, lengthProgression);
   const progression = () => {
     const masive = [];
-    for (let i = 0; i < lengthProgression; i = i + 1) {
+    for (let i = 1; i < lengthProgression + 1; i = i + 1) {
       const number = `${startProgression + stepProgression * (i - 1)}`;
       masive.push(number);
     }
     return masive;
   }
+  
   const questionGame = progression();
-  return questionGame;
+  const correctAnswer = progression();
+  questionGame[indexProgresii] = '..';
+  console.log(`${questionGame}`);
+  return correctAnswer[indexProgresii];
 }
-const getCorrectAnswer = (question) => {
-  return question[indexProgresii];
-}
-const gameDescription = () => {
-  return 'What number is missing in the progression?';  
-}
+
+const gameDescription = 'What number is missing in the progression?';  
+
 export const startGame = () => {
-  gameEngine(gameDescription, generateQuestion, formulateQuestion, getCorrectAnswer);
+  gameEngine(gameDescription, generateQuestion);
 }
 

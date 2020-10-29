@@ -1,13 +1,7 @@
-import { getRandomInt } from 'file:/root/frontend-project-lvl1/src/random.js';
-import { gameEngine } from 'file:/root/frontend-project-lvl1/src/index.js';
-const formulateQuestion = (question) => {
-  return `${question}`;
-}
-const generateQuestion = () => { 
-  const questionGame = getRandomInt(100);
-  return questionGame;
-}
-const getCorrectAnswer = (number) => {
+import { getRandomInt } from '../random.js';
+import { gameEngine } from '../index.js';
+
+const correctAnswer = (number) => {
   if (number < 2) {
     return "no";
   }
@@ -18,9 +12,15 @@ const getCorrectAnswer = (number) => {
   }
     return "yes";
 }
-const gameDescription = () => {
-  return 'Answer "yes" if given number is prime. Otherwise answer "no".';  
+
+const generateQuestion = () => { 
+  const questionGame = getRandomInt(0,100);
+  console.log(`${questionGame}`);
+  return correctAnswer(questionGame)
 }
+
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';  
+
 export const startGame = () => {
-  gameEngine(gameDescription, generateQuestion, formulateQuestion, getCorrectAnswer);
+  gameEngine(gameDescription, generateQuestion);
 }

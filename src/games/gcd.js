@@ -1,27 +1,25 @@
-import { getRandomInt } from 'file:/root/frontend-project-lvl1/src/random.js';
-import { gameEngine } from 'file:/root/frontend-project-lvl1/src/index.js';
+import { getRandomInt } from '../random.js';
+import { gameEngine } from '../index.js';
 
-const formulateQuestion = (question) => {
-  return `${question[0]} ${question[1]}`;
-}
-const generateQuestion = () => { 
-  const randomNumber1 = getRandomInt(50);
-  const randomNumber2 = getRandomInt(50);
-  const questionGame = [randomNumber1, randomNumber2];
-  return questionGame;
-}
-const getCorrectAnswer = (numbers) => {   
-  var n = numbers.length, x = Math.abs(numbers[0]);
-  for (var i = 1; i < n; i++)
-  { var y = Math.abs(numbers[ i ]);
+const correctAnswer = (number1, number2) => {   
+  var x = Math.abs(number1);
+  { var y = Math.abs(number2);
   while (x && y){ x > y ? x %= y : y %= x; }
   x += y;
   }
   return `${x}`;
 } 
-const gameDescription = () => {
-  return 'Find the greatest common divisor of given numbers.';
+
+const generateQuestion = () => { 
+  const randomNumber1 = getRandomInt(1, 50);
+  const randomNumber2 = getRandomInt(1, 50);
+  const questionGame = `${randomNumber1} ${randomNumber2}`;
+  console.log(questionGame);
+  return correctAnswer(randomNumber1, randomNumber2);
 }
+
+const gameDescription = 'Find the greatest common divisor of given numbers.';
+
 export const startGame = () => {
-  gameEngine(gameDescription, generateQuestion, formulateQuestion, getCorrectAnswer);
+  gameEngine(gameDescription, generateQuestion);
 }

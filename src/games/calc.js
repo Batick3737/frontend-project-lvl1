@@ -1,31 +1,30 @@
-import { getRandomInt } from 'file:/root/frontend-project-lvl1/src/random.js';
-import { gameEngine } from 'file:/root/frontend-project-lvl1/src/index.js';
-const formulateQuestion = (question) => {
-  return `${question[0]}${question[1]}${question[2]}`;
+import { getRandomInt } from '../random.js';
+import { gameEngine } from '../index.js';
+
+const correctAnswer = (number1, number2, operation) => {
+  switch (operation) {
+    case '+':
+      return `${number1 + number2}`; 
+    case '-':
+      return `${number1 - number2}`;
+    case '*':
+      return `${number1 * number2}`;
+  }
 }
+
 const generateQuestion = () => { 
   const operation = ['+', '-', '*'];
-  const randomIndex = getRandomInt(operation.length);
+  const randomIndex = getRandomInt(0, operation.length);
   const randomOperation = operation[randomIndex];
-  const randomNumber1 = getRandomInt(50);
-  const randomNumber2 = getRandomInt(20);
-  const questionGame = [randomNumber1, randomOperation, randomNumber2];
-  return questionGame;
+  const randomNumber1 = getRandomInt(1, 20);
+  const randomNumber2 = getRandomInt(1, 20);
+  const questionGame = `${randomNumber1}${randomOperation}${randomNumber2}`;
+  console.log(questionGame);
+  return correctAnswer(randomNumber1, randomNumber2, randomOperation);
 }
-const getCorrectAnswer = (questionGame) => { 
-  if (questionGame[1] === '+') {
-    return `${questionGame[0] + questionGame[2]}`;
-  } 
-  if (questionGame[1] === '-') {  
-    return `${questionGame[0] - questionGame[2]}`;
-  } 
-  if (questionGame[1] === '*') {
-    return `${questionGame[0] * questionGame[2]}`;
-  }   
-}   
-const gameDescription = () => {
-  return 'What is the result of the expression?';  
-}
+
+const gameDescription = 'What is the result of the expression?';  
+
 export const startGame = () => {
-  gameEngine(gameDescription, generateQuestion, formulateQuestion, getCorrectAnswer);
+  gameEngine(gameDescription, generateQuestion);
 }

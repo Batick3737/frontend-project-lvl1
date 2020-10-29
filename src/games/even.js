@@ -1,22 +1,20 @@
-import { getRandomInt } from 'file:/root/frontend-project-lvl1/src/random.js';
-import { gameEngine } from 'file:/root/frontend-project-lvl1/src/index.js';
-const formulateQuestion = (question) => {
-  return `${question}`;
-}
+import { getRandomInt } from '../random.js';
+import { gameEngine } from '../index.js';
 
-const generateQuestion = () => { 
-  const questionGame = getRandomInt(100);
-  return questionGame;
-}
-const getCorrectAnswer = (questionGame) => { 
+const correctAnswer = (questionGame) => { 
   if (questionGame % 2 === 0) {
     return "yes";
   }
     return "no";
 }
-const gameDescription = () => {
-  return 'Answer "yes" if the number is even, otherwise answer "no".';
+const generateQuestion = () => { 
+  const questionGame = getRandomInt(1, 100);
+  console.log(`${questionGame}`);
+  return correctAnswer(questionGame);
 }
+
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 export const startGame = () => {
-  gameEngine(gameDescription, generateQuestion, formulateQuestion, getCorrectAnswer);
+  gameEngine(gameDescription, generateQuestion);
 }
