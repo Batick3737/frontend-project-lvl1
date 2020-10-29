@@ -36,5 +36,14 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.21.5"
   }
+{
+  "name": "my-cool-package",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
+  }
+}
 }
 
