@@ -5,3 +5,4 @@
 3) brain-gcd   https://asciinema.org/a/8sBaIi3n059knNEPKuSLaWng6
 4) brain-progression https://asciinema.org/a/Pu2dncTbfKEivMmSW5fdWq7JJ
 5) brain-prime https://asciinema.org/a/kHjrj7SkcemuvgUisa9ftFrnH
+![Super-Linter](https://github.com/Batick3737/frontend-project-lvl1/actions?query=workflow%3ASuper-Linter)
