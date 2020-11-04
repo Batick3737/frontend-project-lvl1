@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import { greeting }  from 'file:/root/frontend-project-lvl1/src/cli.js';
+import { greeting } from '../src/cli.js';
+
 greeting();
