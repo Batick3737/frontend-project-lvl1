@@ -2,14 +2,13 @@ import { getRandomInt } from '../random.js';
 import { gameEngine } from '../index.js';
 
 const correctAnswer = (number1, number2) => {
-  let x = Math.abs(number1);
-  { let y = Math.abs(number2);
-    while (x && y) { x > y ? x %= y : y %= x; }
-    x += y;
+  if (number2 > 0) {
+    const remainder = number1 % number2;
+    return correctAnswer(number2, remainder);
   }
-  return `${x}`;
-};
 
+  return `${number1}`;
+};
 const generateQuestion = () => {
   const randomNumber1 = getRandomInt(1, 50);
   const randomNumber2 = getRandomInt(1, 50);
