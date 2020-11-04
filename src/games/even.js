@@ -18,4 +18,3 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 export const startGame = () => {
   gameEngine(gameDescription, generateQuestion);
 };
-export default startGame;
