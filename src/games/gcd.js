@@ -13,8 +13,8 @@ const generateQuestion = () => {
   const randomNumber1 = getRandomInt(1, 50);
   const randomNumber2 = getRandomInt(1, 50);
   const questionGame = `${randomNumber1} ${randomNumber2}`;
-  console.log(questionGame);
-  return correctAnswer(randomNumber1, randomNumber2);
+  const answer = correctAnswer(randomNumber1, randomNumber2);
+  return [questionGame, answer];
 };
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
