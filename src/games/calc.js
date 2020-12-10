@@ -13,7 +13,7 @@ const miniCalculator = (number1, number2, operation) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const operation = ['+', '-', '*'];
+  const operations = ['+', '-', '*'];
   const randomIndex = getRandomInt(0, operations.length);
   const randomOperation = operations[randomIndex];
   const randomNumber1 = getRandomInt(1, 20);
