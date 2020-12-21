@@ -1,27 +1,27 @@
 import { getRandomInt } from '../random.js';
 import { gameEngine } from '../index.js';
 
-const generateLengthProgression = getRandomInt(6, 11);
-const generateQuestionAndAnswer = () => {
-  const generateStartProgression = getRandomInt(0, 20);
-  const generateStepProgression = getRandomInt(2, 6);
-  const indexProgression = getRandomInt(0, generateLengthProgression);
-  const generateProgression = (startProgression, stepProgression, lengthProgression) => {
-    const masive = [];
-    for (let i = 0; i < lengthProgression; i += 1) {
-      const number = startProgression + stepProgression * i;
-      masive.push(number);
-    }
-    return masive;
-  };
+const generateProgression = (startProgression1, stepProgression1, lengthProgression1) => {
+  const progression = [];
+  for (let i = 0; i < lengthProgression1; i += 1) {
+    const numberProgression = startProgression1 + stepProgression1 * i;
+    progression.push(numberProgression);
+  }
+  return progression;
+};
 
-  const questionGame = generateProgression(generateStartProgression, generateStepProgression,
-    generateLengthProgression);
-  const correctAnswer = generateProgression(generateStartProgression, generateStepProgression,
-    generateLengthProgression);
-  questionGame[indexProgression] = '..';
-  const answer = correctAnswer[indexProgression];
-  return [questionGame, answer];
+const generateQuestionAndAnswer = () => {
+  const lengthProgression = getRandomInt(6, 11);
+  const startProgression = getRandomInt(0, 20);
+  const stepProgression = getRandomInt(2, 6);
+  const indexHiddenElementProgression = getRandomInt(0, lengthProgression);
+  const gameQuestion = generateProgression(startProgression, stepProgression,
+    lengthProgression);
+  const correctAnswer = generateProgression(startProgression, stepProgression,
+    lengthProgression);
+  gameQuestion[indexHiddenElementProgression] = '..';
+  const answer = correctAnswer[indexHiddenElementProgression];
+  return [`${gameQuestion}`, `${answer}`];
 };
 
 const gameDescription = 'What number is missing in the progression?';

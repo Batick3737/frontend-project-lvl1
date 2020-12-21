@@ -5,3 +5,12 @@
 3) brain-gcd   https://asciinema.org/a/8sBaIi3n059knNEPKuSLaWng6
 4) brain-progression https://asciinema.org/a/Pu2dncTbfKEivMmSW5fdWq7JJ
 5) brain-prime https://asciinema.org/a/kHjrj7SkcemuvgUisa9ftFrnH
+
+Для встановлення проекту "Ігри розуму", потрібно виконати команду npm install.
+Також потрібно встановити бібліотеку "readline-sync", для роботи програми.
+Даний проект містить 5 ігор, для запуску потрібно виконати команду:
+Гра: "Перевірка на парність" - brain-even.
+Гра: "Калькулятор" - brain-calc.
+Гра "НОД" - brain-gcd.
+Гра "Арифметична прогресія" - brain-progression.
+Гра "просте число?" - brain-prime.
